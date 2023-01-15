@@ -1,3 +1,7 @@
+package Classes;
+
+import static Classes.Constants.*;
+
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Dimension;
@@ -25,14 +29,6 @@ public class SlideViewerComponent extends JComponent {
 	private JFrame frame = null;
 	
 	private static final long serialVersionUID = 227L;
-	
-	private static final Color BGCOLOR = Color.white;
-	private static final Color COLOR = Color.black;
-	private static final String FONTNAME = "Dialog";
-	private static final int FONTSTYLE = Font.BOLD;
-	private static final int FONTHEIGHT = 10;
-	private static final int XPOS = 1100;
-	private static final int YPOS = 20;
 
 	public SlideViewerComponent(Presentation pres, JFrame frame) {
 		setBackground(BGCOLOR); 

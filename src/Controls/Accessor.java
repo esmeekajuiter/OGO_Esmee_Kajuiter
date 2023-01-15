@@ -1,6 +1,4 @@
-package Classes;
-
-import Controls.DemoPresentationReader;
+package Controls;
 
 /**
  * <p>An Accessor makes it possible to read and write data
@@ -22,4 +20,5 @@ public abstract class Accessor {
 	public static DemoPresentationReader getDemoAccessor() {
 		return new DemoPresentationReader();
 	}
+
 }

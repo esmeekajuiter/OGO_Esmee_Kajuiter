@@ -1,3 +1,6 @@
+package Classes;
+
+import static Classes.Constants.*;
 import java.awt.Rectangle;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
@@ -22,11 +25,7 @@ import java.io.IOException;
 
 public class BitmapItem extends SlideItem {
   private BufferedImage bufferedImage;
-  private String imageName;
-  
-  protected static final String FILE = "File ";
-  protected static final String NOTFOUND = " not found";
-
+  private final String imageName;
 
   	//level indicates the item-level; name indicates the name of the file with the image
 	public BitmapItem(int level, String name) {

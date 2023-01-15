@@ -1,3 +1,7 @@
+package Classes;
+
+import static Classes.Constants.*;
+
 import java.awt.Rectangle;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -25,9 +29,7 @@ import java.util.ArrayList;
  */
 
 public class TextItem extends SlideItem {
-	private String text;
-	
-	private static final String EMPTYTEXT = "No Text Given";
+	private final String text;
 
 //A textitem of int level with text string
 	public TextItem(int level, String string) {
@@ -57,9 +59,7 @@ public class TextItem extends SlideItem {
 			float scale, Style myStyle) {
 		List<TextLayout> layouts = getLayouts(g, myStyle, scale);
 		int xsize = 0, ysize = (int) (myStyle.leading * scale);
-		Iterator<TextLayout> iterator = layouts.iterator();
-		while (iterator.hasNext()) {
-			TextLayout layout = iterator.next();
+		for (TextLayout layout : layouts) {
 			Rectangle2D bounds = layout.getBounds();
 			if (bounds.getWidth() > xsize) {
 				xsize = (int) bounds.getWidth();
@@ -83,9 +83,7 @@ public class TextItem extends SlideItem {
 				y + (int) (myStyle.leading * scale));
 		Graphics2D g2d = (Graphics2D)g;
 		g2d.setColor(myStyle.color);
-		Iterator<TextLayout> it = layouts.iterator();
-		while (it.hasNext()) {
-			TextLayout layout = it.next();
+		for (TextLayout layout : layouts) {
 			pen.y += layout.getAscent();
 			layout.draw(g2d, pen.x, pen.y);
 			pen.y += layout.getDescent();
