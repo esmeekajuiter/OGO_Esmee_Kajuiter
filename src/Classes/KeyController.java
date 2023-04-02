@@ -14,16 +14,16 @@ import java.awt.event.KeyAdapter;
 */
 
 public class KeyController extends KeyAdapter {
-	private final Presentation presentation; //Commands are given to the presentation
+	private final SlideView slideView; //Commands are given to the slideView
 
-	public KeyController(Presentation p) {
-		presentation = p;
+	public KeyController(SlideView slide) {
+		slideView = slide;
 	}
 
 	public void keyPressed(KeyEvent keyEvent) {
 		switch (keyEvent.getKeyCode()) {
-			case KeyEvent.VK_PAGE_DOWN, KeyEvent.VK_DOWN, KeyEvent.VK_ENTER, '+' -> presentation.nextSlide();
-			case KeyEvent.VK_PAGE_UP, KeyEvent.VK_UP, '-' -> presentation.prevSlide();
+			case KeyEvent.VK_PAGE_DOWN, KeyEvent.VK_ENTER, '+' -> slideView.nextSlide();
+			case KeyEvent.VK_PAGE_UP, KeyEvent.VK_UP, '-' -> slideView.prevSlide();
 			case 'q', 'Q' -> System.exit(0);
 			//Should not be reached
 			default -> {

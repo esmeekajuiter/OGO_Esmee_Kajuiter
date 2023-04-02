@@ -15,9 +15,9 @@ import java.util.Vector;
  * @version 1.6 2014/05/16 Sylvia Stuurman
  */
 
-public class Slide {
-	public final static int WIDTH = 1200;
-	public final static int HEIGHT = 800;
+public class Slide extends TxtScanner {
+	public final static int WIDTH = textsSlide.get(0);
+	public final static int HEIGHT = textsSlide.get(1);
 	protected String title; //The title is kept separately
 	protected Vector<SlideItem> items; //The SlideItems are kept in a vector
 

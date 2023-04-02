@@ -14,7 +14,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
-public class XMLAccessorReader extends Reader {
+public class XMLAccessorReader extends XMLAccessor {
     @Override
     public void loadFile(Presentation presentation, String filename) throws IOException {
         int slideNumber, itemNumber, max = 0, maxItems = 0;

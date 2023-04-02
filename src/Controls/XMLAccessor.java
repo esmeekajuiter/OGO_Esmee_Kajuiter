@@ -1,7 +1,10 @@
 package Controls;
 
+import Classes.Presentation;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
+
+import java.io.IOException;
 
 
 /** XMLAccessor, reads and writes XML files
@@ -14,10 +17,16 @@ import org.w3c.dom.NodeList;
  * @version 1.6 2014/05/16 Sylvia Stuurman
  */
 
-public class XMLAccessor {
+public class XMLAccessor implements Reader, Writer {
     static String getTitle(Element element, String tagName) {
     	NodeList titles = element.getElementsByTagName(tagName);
     	return titles.item(0).getTextContent();
     	
     }
+
+    @Override
+    public void loadFile(Presentation p, String fn) throws IOException {}
+
+    @Override
+    public void saveFile(Presentation p, String fn) throws IOException {}
 }

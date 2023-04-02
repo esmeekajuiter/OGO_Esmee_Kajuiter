@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Vector;
 
-public class XMLAccessorWriter extends Writer {
+public class XMLAccessorWriter extends XMLAccessor {
     @Override
     public void saveFile(Presentation presentation, String filename) throws IOException
     {

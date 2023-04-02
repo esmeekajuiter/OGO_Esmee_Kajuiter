@@ -4,6 +4,7 @@ import Controls.*;
 import javax.swing.JOptionPane;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 /** JabberPoint Main Program
  * <p>This program is distributed under the terms of the accompanying
@@ -19,24 +20,25 @@ import java.io.IOException;
  * @version 1.6 2014/05/16 Sylvia Stuurman
  */
 
-public class JabberPoint {
-	protected static final String IOERR = "IO Error: ";
-	protected static final String JABERR = "Jabberpoint Error ";
-	protected static final String JABVERSION = "Jabberpoint 1.6 - OU version";
+public class JabberPoint extends TxtScanner{
+	protected static final String IOERR = textMain.get(0);
+	protected static final String JABERR = textMain.get(1);
+	protected static final String JABVERSION = textMain.get(2);
 
 	/** The main program */
 	public static void main(String[] argv) {
-		
 		Style.createStyles();
 		Presentation presentation = new Presentation();
-		new SlideViewerFrame(JABVERSION, presentation);
+		SlideView slideView = new SlideView(presentation);
+		new SlideViewerFrame(JABVERSION, presentation, slideView);
+		DemoPresentationReader demoPresentationReader = new DemoPresentationReader();
 		try {
 			if (argv.length == 0) { //a demo presentation
-				Accessor.getDemoAccessor().loadFile(presentation, "");
+				demoPresentationReader.loadFile(presentation, "");
 			} else {
 				new XMLAccessorReader().loadFile(presentation, argv[0]);
 			}
-			presentation.setSlideNumber(0);
+			slideView.setSlideNumber(0);
 		} catch (IOException ex) {
 			JOptionPane.showMessageDialog(null,
 					IOERR + ex, JABERR,

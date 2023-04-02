@@ -1,0 +1,12 @@
+dom
+showtitle
+title
+slide
+item
+level
+kind
+text
+image
+Parser Configuration Exception
+Unknown Element type
+Number Format Exception

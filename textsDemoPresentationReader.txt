@@ -1,0 +1,27 @@
+Demo Presentation
+JabberPoint
+The Java prestentation tool
+Copyright (c) 1996-2000: Ian Darwin
+Copyright (c) 2000-now:
+Gert Florijn and Sylvia Stuurman
+Calling Jabberpoint without a filename
+will show this presentation
+Navigate:
+Next slide: PgDn or Enter
+Previous slide: PgUp or up-arrow
+Quit: q or Q
+Demonstration of levels and styles
+Level 1
+Level 2
+Again level 1
+Level 1 has style number 1
+Level 2 has style number 2
+This is how level 3 looks like
+And this is level 4
+The third slide
+To open a new presentation,
+use File->Open from the menu.
+ 
+This is the end of the presentation.
+JabberPoint.jpg
+Save As->Demo! called

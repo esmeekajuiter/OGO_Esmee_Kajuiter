@@ -1,22 +1,24 @@
 package Controls;
 
-public class ConstantsControls {
+import Classes.TxtScanner;
+
+public class ConstantsControls extends TxtScanner {
     // XMLAccessor
     /** Default API to use. */
-    protected static final String DEFAULT_API_TO_USE = "dom";
+    protected static final String DEFAULT_API_TO_USE = textsXMLAccessor.get(0);
 
     /** Names of xml tags of attributes */
-    protected static final String SHOWTITLE = "showtitle";
-    protected static final String SLIDETITLE = "title";
-    protected static final String SLIDE = "slide";
-    protected static final String ITEM = "item";
-    protected static final String LEVEL = "level";
-    protected static final String KIND = "kind";
-    protected static final String TEXT = "text";
-    protected static final String IMAGE = "image";
+    protected static final String SHOWTITLE = textsXMLAccessor.get(1);
+    protected static final String SLIDETITLE = textsXMLAccessor.get(2);
+    protected static final String SLIDE = textsXMLAccessor.get(3);
+    protected static final String ITEM = textsXMLAccessor.get(4);
+    protected static final String LEVEL = textsXMLAccessor.get(5);
+    protected static final String KIND = textsXMLAccessor.get(6);
+    protected static final String TEXT = textsXMLAccessor.get(7);
+    protected static final String IMAGE = textsXMLAccessor.get(8);
 
     /** Text of messages */
-    protected static final String PCE = "Parser Configuration Exception";
-    protected static final String UNKNOWNTYPE = "Unknown Element type";
-    protected static final String NFE = "Number Format Exception";
+    protected static final String PCE = textsXMLAccessor.get(9);
+    protected static final String UNKNOWNTYPE = textsXMLAccessor.get(10);
+    protected static final String NFE = textsXMLAccessor.get(11);
 }

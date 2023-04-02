@@ -1,0 +1,17 @@
+About
+File
+Exit
+Go to
+Help
+New
+Next
+Open
+Page number?
+Prev
+Save
+View
+testPresentation.xml
+savedPresentation.xml
+IO Exception: 
+Load Error
+Save Error
